@@ -1,6 +1,6 @@
 # email-builder
 
-Creates HTML mails. Inlines images and css. Can send testmails.
+Creates HTML emails. Inlines images and css. Can send testmails.
 
 ## Usage
 
