@@ -1,0 +1,6 @@
+testmail:
+  name: Marian Friedmann
+  email: marian.friedmann@gmail.com
+  subject: Mail Subject
+
+template: mail.html

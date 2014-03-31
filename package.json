@@ -1,0 +1,17 @@
+{
+  "name": "email-builder",
+  "description": "Creates HTML mails. Inlines images and css. Can send testmails.",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-email-builder": "^2.0.0",
+    "grunt-image-embed-src": "^0.1.1",
+    "grunt-nodemailer": "^0.2.0",
+    "grunt-open": "^0.2.3",
+    "load-grunt-tasks": "^0.4.0"
+  }
+}

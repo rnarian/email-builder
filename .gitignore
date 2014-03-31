@@ -1,0 +1,8 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Grunt
+.sass-cache
+node_modules/
+build
