@@ -47,12 +47,13 @@ module.exports = function(grunt) {
                     type: 'Sendmail'
                 },
                 message: {
-                    subject: '<%= config.testmail.subject %>'
+                    subject: '<%= config.mail.subject %>'
                 },
+                from: '<%= config.mail.from %>',
                 recipients: [
                     {
-                        email: '<%= config.testmail.email %>',
-                        name: '<%= config.testmail.name %>'
+                        email: '<%= config.mail.to.email %>',
+                        name: '<%= config.mail.to.name %>'
                     }
                 ]
             },

@@ -1,6 +1,8 @@
-testmail:
-  name: Marian Friedmann
-  email: marian.friedmann@gmail.com
-  subject: Mail Subject
+mail:
+  subject: Testmail
+  from:    Mail Tester <test@mail-tester.com>
+  to:
+    name:  Marian Friedmann
+    email: marian.friedmann@gmail.com
 
-template: mail.html
+template:  mail.html
