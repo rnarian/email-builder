@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
-
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         config: grunt.file.readYAML('config.yml'),
@@ -15,6 +14,17 @@ module.exports = function(grunt) {
             test :{
                 files : {
                     '<%= path.build %>/<%= config.template %>' : '<%= config.template %>'
+                }
+            }
+        },
+
+        sass: {
+            dev: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    '<%= path.assets %>/css/style.css': '<%= path.assets %>/scss/style.scss'
                 }
             }
         },
@@ -84,12 +94,16 @@ module.exports = function(grunt) {
             },
             tpl: {
                 files: ['<%= config.template %>'],
-                tasks: ['emailBuilder', 'copy']
+                tasks: ['emailBuilder', 'copy', 'imageEmbed']
+            },
+            scss: {
+                files: ['<%= path.assets %>/scss/*'],
+                tasks: ['build']
             }
         }
     });
 
     grunt.registerTask('default', ['connect', 'open', 'watch']);
-    grunt.registerTask('build', ['emailBuilder', 'copy', 'imageEmbed']);
+    grunt.registerTask('build', ['sass', 'emailBuilder', 'copy', 'imageEmbed']);
     grunt.registerTask('test', ['build', 'nodemailer']);
 };
