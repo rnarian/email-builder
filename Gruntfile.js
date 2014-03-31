@@ -89,6 +89,6 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['connect', 'open', 'watch']);
-    grunt.registerTask('build', ['emailBuilder', 'imageEmbed', 'copy']);
+    grunt.registerTask('build', ['emailBuilder', 'copy', 'imageEmbed']);
     grunt.registerTask('test', ['build', 'nodemailer']);
 };
