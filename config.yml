@@ -5,4 +5,9 @@ mail:
     name:  Marian Friedmann
     email: marian.friedmann@gmail.com
 
+litmus:
+  username: user@domain.com
+  password: supersecretpassword
+  url: https://yourcompany.litmus.com 
+
 template:  mail.html
