@@ -72,6 +72,19 @@ module.exports = function(grunt) {
             }
         },
 
+        litmus: {
+            test: {
+                src: ['<%= path.build %>/<%= config.template %>'], 
+                options: {
+                    username: '<%= config.litmus.username %>',
+                    password: '<%= config.litmus.password %>',
+                    url: '<%= config.litmus.url %>',
+                    clients: ['gmailnew', 'ffgmailnew', 'chromegmailnew'],
+                    subject: '<%= config.mail.subject %>'
+                }
+            } 
+        },
+
         connect: {
             server: {
                 options: {
@@ -106,4 +119,5 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['connect', 'open', 'watch']);
     grunt.registerTask('build', ['sass', 'emailBuilder', 'copy', 'imageEmbed']);
     grunt.registerTask('test', ['build', 'nodemailer']);
+    grunt.registerTask('test:litmus', ['build', 'litmus']);
 };
