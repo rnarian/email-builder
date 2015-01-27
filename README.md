@@ -15,6 +15,7 @@ Install dependencies
 
 Run
 
-    grunt build // to build mail
-    grunt test  // to send a testmail (adjust config.yml)
-    grunt       // starts connect server for easy developing
+    grunt build 				// to build mail
+    grunt test  				// to send a testmail (adjust config.yml)
+		grunt test:litmus		// to test your mail with litmus (adjust config.yml)
+    grunt      					// starts connect server for easy developing
